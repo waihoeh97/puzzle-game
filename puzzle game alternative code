@@ -1,0 +1,123 @@
+//! Puzzle Game alternative code
+
+void RotateGridMenu()
+
+	int xChoice = -1;
+	int yChoice = -1;
+
+	textcolor(WHITE);
+	gotoxy(50, 5);
+	cout << "Number of steps taken : " << totalSteps << endl;
+	gotoxy(2, totalRow * 3 + totalCol + 5);
+	cout << "Choose location to rotate [x,y] eg: 1 3 : ";
+	cin >> xChoice >> yChoice;
+
+	RotateGrid(yChoice, xChoice);
+	Unlink();
+	ReinitializeLink();
+	isSolved = ParseLink();
+	
+void RotateGrid()
+
+	bool isRotating = true;
+    gotoxy(2, totalRow * 3 + totalCol + 7);
+    cout << "Which Rotation? (Refer to the guide on the top right) : ";
+
+    do
+    {
+        int choice = -1;
+        cin >> choice;
+        if (gridNode[row][col].type == STRAIGHT_HORIZONTAL || gridNode[row][col].type == STRAIGHT_VERTICAL)
+        {
+            if (choice == 1)
+            {
+                gridNode[row][col].SetType(STRAIGHT_HORIZONTAL);
+                isRotating = false;
+            }
+            else if (choice == 2)
+            {
+                gridNode[row][col].SetType(STRAIGHT_VERTICAL);
+                isRotating = false;
+            }
+            else
+            {
+                gotoxy(2, totalRow * 3 + totalCol + 8);
+                cout << "The shape you have chosen is not applicable..." << endl;
+                system("PAUSE");
+                delline();
+                totalSteps -= 1;
+                break;
+            }
+        }
+        else if (gridNode[row][col].type == L_SHAPE_0_DEGREE ||
+                 gridNode[row][col].type == L_SHAPE_90_DEGREE ||
+                 gridNode[row][col].type == L_SHAPE_180_DEGREE ||
+                 gridNode[row][col].type == L_SHAPE_270_DEGREE)
+        {
+            if (choice == 3)
+            {
+                gridNode[row][col].SetType(L_SHAPE_0_DEGREE);
+                isRotating = false;
+            }
+            else if (choice == 4)
+            {
+                gridNode[row][col].SetType(L_SHAPE_90_DEGREE);
+                isRotating = false;
+            }
+            else if (choice == 5)
+            {
+                gridNode[row][col].SetType(L_SHAPE_180_DEGREE);
+                isRotating = false;
+            }
+            else if (choice == 6)
+            {
+                gridNode[row][col].SetType(L_SHAPE_270_DEGREE);
+                isRotating = false;
+            }
+            else
+            {
+                gotoxy(2, totalRow * 3 + totalCol + 8);
+                cout << "The shape you have chosen is not applicable..." << endl;
+                system("PAUSE");
+                delline();
+                totalSteps -= 1;
+                break;
+            }
+        }
+        else if (gridNode[row][col].type == T_SHAPE_0_DEGREE ||
+                 gridNode[row][col].type == T_SHAPE_90_DEGREE ||
+                 gridNode[row][col].type == T_SHAPE_180_DEGREE ||
+                 gridNode[row][col].type == T_SHAPE_270_DEGREE)
+        {
+            if (choice == 7)
+            {
+                gridNode[row][col].SetType(T_SHAPE_0_DEGREE);
+                isRotating = false;
+            }
+            else if (choice == 8)
+            {
+                gridNode[row][col].SetType(T_SHAPE_90_DEGREE);
+                isRotating = false;
+            }
+            else if (choice == 9)
+            {
+                gridNode[row][col].SetType(T_SHAPE_180_DEGREE);
+                isRotating = false;
+            }
+            else if (choice == 10)
+            {
+                gridNode[row][col].SetType(T_SHAPE_270_DEGREE);
+                isRotating = false;
+            }
+            else
+            {
+                gotoxy(2, totalRow * 3 + totalCol + 8);
+                cout << "The shape you have chosen is not applicable..." << endl;
+                system("PAUSE");
+                delline();
+                totalSteps -= 1;
+                break;
+            }
+        }
+    } while (isRotating);
+    totalSteps += 1;

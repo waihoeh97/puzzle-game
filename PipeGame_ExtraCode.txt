@@ -1,0 +1,107 @@
+void RotateGrid()
+{
+	//! if gridNode[4][6] == LSHAPE_0_DEGREE
+	//! rotate clockwise -> LSHAPE_90_DEGREE
+	if(gridNode[xGrid][yGrid].type == STRAIGHT_HORIZONTAL)
+	{
+		gridNode[xGrid][yGrid].SetType(STRAIGHT_VERTICAL);
+	}
+	else if(gridNode[xGrid][yGrid].type == STRAIGHT_VERTICAL)
+	{
+		gridNode[xGrid][yGrid].SetType(STRAIGHT_HORIZONTAL);
+		step++;
+	}
+	else if(gridNode[xGrid][yGrid].type == LSHAPE_0_DEGREE)
+	{
+		gridNode[xGrid][yGrid].SetType(LSHAPE_90_DEGREE);
+		step++;
+	}
+	else if(gridNode[xGrid][yGrid].type == LSHAPE_90_DEGREE)
+	{
+		gridNode[xGrid][yGrid].SetType(LSHAPE_180_DEGREE);
+		step++;
+	}
+	else if(gridNode[xGrid][yGrid].type == LSHAPE_180_DEGREE)
+	{
+		gridNode[xGrid][yGrid].SetType(LSHAPE_270_DEGREE);
+		step++;
+	}
+	else if(gridNode[xGrid][yGrid].type == LSHAPE_270_DEGREE)
+	{
+		gridNode[xGrid][yGrid].SetType(LSHAPE_0_DEGREE);
+		step++;
+	}
+	else if(gridNode[xGrid][yGrid].type == TSHAPE_0_DEGREE)
+	{
+		gridNode[xGrid][yGrid].SetType(TSHAPE_90_DEGREE);
+		step++;
+	}
+	else if(gridNode[xGrid][yGrid].type == TSHAPE_90_DEGREE)
+	{
+		gridNode[xGrid][yGrid].SetType(TSHAPE_180_DEGREE);
+		step++;
+	}
+	else if(gridNode[xGrid][yGrid].type == TSHAPE_180_DEGREE)
+	{
+		gridNode[xGrid][yGrid].SetType(TSHAPE_270_DEGREE);
+		step++;
+	}
+	else if(gridNode[xGrid][yGrid].type == TSHAPE_270_DEGREE)
+	{
+		gridNode[xGrid][yGrid].SetType(TSHAPE_0_DEGREE);
+		step++;
+	}
+}
+void RotateGridMenu(Node* currentNode)
+{
+    DrawGrid();
+           if(GetAsyncKeyState(VK_LEFT))
+            {
+                if(yGrid>0)
+                {
+                    yGrid--;
+
+                }
+
+            }
+            else if(GetAsyncKeyState(VK_RIGHT))
+            {
+                if(yGrid<8)
+                {
+                    yGrid++;
+
+                }
+            }
+            else if(GetAsyncKeyState(VK_UP))
+            {
+                if(xGrid>0)
+                {
+                   xGrid--;
+
+                }
+
+            }
+            else if(GetAsyncKeyState(VK_DOWN))
+            {
+                if(xGrid<5)
+                {
+                    xGrid++;
+
+                }
+
+            }
+            else if(GetAsyncKeyState(VK_SPACE))
+            {
+
+                RotateGrid();
+                Unlink();
+                ReinitializeLink();
+                isSolved = ParseLink(currentNode);
+
+            }
+
+            DrawGrid();
+            gotoxy(1,32);
+            cout<<endl;
+            system("PAUSE");
+}

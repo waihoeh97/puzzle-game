@@ -1,0 +1,74 @@
+# depslib dependency file v1.0
+1330324072 source:c:\users\0115531\documents\new folder\puzzlegameversion1\conio_yp.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+	"conio_yp.h"
+
+1330927944 c:\users\0115531\documents\new folder\puzzlegameversion1\conio_yp.h
+	<_mingw.h>
+
+1500263893 source:c:\users\0115531\documents\new folder\puzzlegameversion1\main.cpp
+	<iostream>
+	<Windows.h>
+	"conio_yp.h"
+	<cmath>
+	<limits>
+
+1330324072 source:h:\kdu\ubgd\semester 3\data structures & algorithm\week 10\puzzlegameversion1\conio_yp.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+	"conio_yp.h"
+
+1330927944 h:\kdu\ubgd\semester 3\data structures & algorithm\week 10\puzzlegameversion1\conio_yp.h
+	<_mingw.h>
+
+1500264034 source:h:\kdu\ubgd\semester 3\data structures & algorithm\week 10\puzzlegameversion1\main.cpp
+	<iostream>
+	<Windows.h>
+	"conio_yp.h"
+	<cmath>
+	<limits>
+
+1330324072 source:c:\users\waiho\onedrive\documents\codeblocks\puzzlegameversion1\conio_yp.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+	"conio_yp.h"
+
+1330927944 c:\users\waiho\onedrive\documents\codeblocks\puzzlegameversion1\conio_yp.h
+	<_mingw.h>
+
+1502250411 source:c:\users\waiho\onedrive\documents\codeblocks\puzzlegameversion1\main.cpp
+	<iostream>
+	<Windows.h>
+	"conio_yp.h"
+	<cmath>
+	<limits>
+	<fstream>
+
+1330324072 source:i:\kdu\ubgd\semester 3\data structures & algorithm\week 10\puzzlegameversion1\conio_yp.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+	"conio_yp.h"
+
+1330927944 i:\kdu\ubgd\semester 3\data structures & algorithm\week 10\puzzlegameversion1\conio_yp.h
+	<_mingw.h>
+
+1500868640 source:i:\kdu\ubgd\semester 3\data structures & algorithm\week 10\puzzlegameversion1\main.cpp
+	<iostream>
+	<Windows.h>
+	"conio_yp.h"
+	<cmath>
+	<limits>
+
